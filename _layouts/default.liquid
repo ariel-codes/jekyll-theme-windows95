@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.liquid -%}
+
+<body>
+
+  <main>
+    {{ content }}
+  </main>
+
+  {%- include system_bar.html -%}
+
+</body>
+
+</html>
