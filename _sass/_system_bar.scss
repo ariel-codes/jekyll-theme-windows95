@@ -1,0 +1,44 @@
+#win95-system-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 26px;
+  background-color: $bg-primary;
+  color: black;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  z-index: 100;
+
+  @include win95-border-outset-top;
+}
+
+.win95-bar-tab {
+  margin: 2px;
+  width: 156px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 9px;
+
+  span {
+    margin-left: 3px;
+  }
+}
+
+#win95-bar-status {
+  height: 20px;
+  right: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  border: 1px solid;
+  border-color: #7f787f #fff8ff #fff8ff #7f787f;
+  #win95-clock {
+    width: 60px;
+    justify-self: center;
+    text-align: center;
+  }
+}

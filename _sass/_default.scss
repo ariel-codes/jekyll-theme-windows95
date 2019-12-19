@@ -2,35 +2,33 @@
   font-family: "MS Sans Serif Regular";
   src: url("/assets/fonts/ms_sans_serif-webfont.woff2") format("woff2"),
     url("/assets/fonts/ms_sans_serif-webfont.woff") format("woff");
-  font-weight: normal;
   font-style: normal;
 }
-$bg-primary: #c0c0c0;
-$bg-secondary: #008081;
 
-body {
-  font-family: "MS Sans Serif Regular";
-  * {
-    padding: 0px;
-    margin: 0px;
-  }
-}
+@import "colors";
+
+@import "borders";
 
 button {
   display: block;
   position: relative;
   background-color: $bg-primary;
-  transition: all 0.2s ease;
-  padding: 4px 10px;
-  margin: 4px;
-  font-size: 14px;
+  transition: all 0 none;
+  font-size: 11px;
   letter-spacing: 1px;
-  outline: 1px solid #000000;
-  border: 2px solid #ffffff #808080 #808080 #ffffff;
-  :focus {
-    outline: none;
+  padding: 3px 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  @include win95-border-outset;
+  // :hover {
+  //   cursor: pointer;
+  // }
+  &:active {
+    @include win95-border-inset;
   }
-  * {
-    border: 1px solid transparent;
+  &:focus {
+    outline: 0;
   }
 }

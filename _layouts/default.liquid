@@ -5,12 +5,15 @@
 
 <body>
 
-  <main>
-    {{ content }}
-  </main>
+  <div id="screen">
+    <main>
+      {{ content }}
+    </main>
 
-  {%- include system_bar.html -%}
+    {%- include system_bar.html -%}
+  </div>
 
 </body>
+<script src="{{ '/assets/js/win95-dynamic.js' | relative_url }}"></script>
 
 </html>
